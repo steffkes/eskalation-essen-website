@@ -48,7 +48,7 @@ useHead({
         style="
           background-image: url(/images/hero.jpg);
           background-size: cover;
-          background-position: 0% 80%;
+          background-position: 50% 50%;
           min-height: 50vh;
         "
       >
@@ -64,7 +64,7 @@ useHead({
           height: 100%;
           background-image: url(/images/hero.jpg);
           background-size: cover;
-          background-position: 0% 0%;
+          background-position: 50% 50%;
         "
       >
         &nbsp;
