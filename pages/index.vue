@@ -17,6 +17,13 @@ const isVideoActive = ref(false);
         </p>
 
         <p><strong>In Bewegung</strong> aber war die Treppe bisher nie!</p>
+      </div>
+
+      <QuoteElement name="Martin" department="BF Krefeld">
+        Die Lichter anmachen, bevor die Lampen ausgehen 🤣
+      </QuoteElement>
+
+      <div class="content">
 
         <p>
           In Budapest wird bereits gegen eine Rolltreppe gelaufen. Als wir den
