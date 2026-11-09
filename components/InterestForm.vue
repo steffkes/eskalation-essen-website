@@ -98,7 +98,7 @@ async function contactForm() {
               v-model="origin"
               type="text"
               class="input"
-              placeholder="z.B. FF Taufkirchen/Vils"
+              placeholder="z.B. FF Musterstadt"
               required
               :disabled="isLoading"
             />
@@ -132,17 +132,9 @@ async function contactForm() {
               :disabled="isLoading"
             />
           </div>
-          <p class="help">
-            Für WhatsApp – darüber organisieren wir auch Testläufe.
-          </p>
         </div>
 
-        <p class="help mt-5">
-          Wir nutzen deine Daten nur, um dich über {{ event.name }} auf dem
-          Laufenden zu halten.
-        </p>
-
-        <div class="field mt-3">
+        <div class="field mt-6">
           <button
             type="submit"
             class="button is-primary is-fullwidth"

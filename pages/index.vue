@@ -95,8 +95,9 @@ const isVideoActive = ref(false);
 
       <div class="content">
         <p>
-          Hast du Bock drauf? Dann trag dich ein – wir melden uns, sobald es
-          Genaueres gibt ツ
+          Hast du Bock drauf? Dann trag dich ein – wir melden uns per WhatsApp,
+          sobald es Genaueres oder Testläufe gibt. Deine Daten nutzen wir nur
+          dafür ツ
         </p>
 
         <InterestForm />
