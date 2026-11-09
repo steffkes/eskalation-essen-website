@@ -45,6 +45,21 @@ async function contactForm() {
     <p class="mt-4">
       Bei Fragen, Ideen bzw. Anregungen: meld dich einfach jederzeit bei uns.
     </p>
+
+    <p class="mt-4">
+      <a
+        class="button is-success is-inverted"
+        :href="
+          'https://wa.me/?text=' +
+          encodeURIComponent(
+            event.name + ' – ' + event.description + ' ' + event.url,
+          )
+        "
+        target="_blank"
+        rel="noopener"
+        >Schick's an deine Wache 📲</a
+      >
+    </p>
   </div>
 
   <form v-else @submit.prevent="contactForm">
@@ -77,13 +92,13 @@ async function contactForm() {
         </div>
 
         <div class="field">
-          <label class="label">Herkunft *</label>
+          <label class="label">Feuerwehr / Wache *</label>
           <div class="control">
             <input
               v-model="origin"
               type="text"
               class="input"
-              placeholder="Woher kommst du / bei welcher Organisation?"
+              placeholder="z.B. FF Musterstadt"
               required
               :disabled="isLoading"
             />
@@ -92,13 +107,13 @@ async function contactForm() {
       </div>
       <div class="column">
         <div class="field">
-          <label class="label">eMail *</label>
+          <label class="label">E-Mail *</label>
           <div class="control">
             <input
               v-model="email"
               type="email"
               class="input"
-              placeholder="Deine eMail-Adresse"
+              placeholder="Deine E-Mail-Adresse"
               required
               :disabled="isLoading"
             />
@@ -106,13 +121,13 @@ async function contactForm() {
         </div>
 
         <div class="field">
-          <label class="label">Handy-Nummer *</label>
+          <label class="label">Handynummer *</label>
           <div class="control">
             <input
               v-model="phone"
               type="tel"
               class="input"
-              placeholder="Deine Handy-Nummer"
+              placeholder="Deine Handynummer"
               required
               :disabled="isLoading"
             />
@@ -127,7 +142,7 @@ async function contactForm() {
               'is-loading': isLoading,
             }"
           >
-            Sagt mir Bescheid wenn's los geht!
+            Sagt mir Bescheid, wenn's losgeht!
           </button>
         </div>
       </div>
