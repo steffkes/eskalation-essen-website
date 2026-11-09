@@ -55,7 +55,7 @@ const isVideoActive = ref(false);
               allow="fullscreen"
               allowfullscreen
               height="100%"
-              src="https://streamable.com/e/mb5o7p?autoplay=1loop=0&muted=1&nocontrols=1"
+              src="https://streamable.com/e/mb5o7p?autoplay=1&loop=0&muted=1&nocontrols=1"
               width="100%"
               style="
                 border: none;

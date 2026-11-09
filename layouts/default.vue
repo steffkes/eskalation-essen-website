@@ -5,6 +5,8 @@ const activeModal = ref(false);
 
 useSeoMeta({
   ogImage: event.url + "/og.jpg",
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
   description: event.description,
 });
 
@@ -16,7 +18,8 @@ const route = useRoute();
 useHead({
   titleTemplate: (pageTitle) =>
     [pageTitle, event.name].filter(Boolean).join(" | "),
-  viewport: "width=device-width, initial-scale=1, maximum-scale=1",
+  viewport: "width=device-width, initial-scale=1",
+  htmlAttrs: { lang: "de" },
   charset: "utf-8",
   meta: [
     { property: "og:type", content: "website" },
@@ -80,7 +83,7 @@ useHead({
         <div class="modal-background"></div>
         <div class="modal-content">
           <p class="image">
-            <img :src="'/qr-code.svg'" />
+            <img :src="'/qr-code.svg'" alt="QR-Code zu dieser Seite" />
           </p>
         </div>
       </div>
@@ -90,6 +93,7 @@ useHead({
         style="position: fixed; right: 0px; bottom: 0px"
         ><img
           :src="'/qr-code.svg'"
+          alt="QR-Code anzeigen"
           style="opacity: 0.1; height: 20px; margin: 10px"
       /></a>
 

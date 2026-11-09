@@ -32,10 +32,22 @@ blockquote::before {
 </style>
 
 <script setup>
-import { useSlots } from "vue";
 const slots = useSlots();
 
 const { name, department } = defineProps(["name", "department"]);
+
+// plain text of the default slot, for the structured data below
+const slotText = (nodes = []) =>
+  nodes
+    .map((node) =>
+      typeof node.children === "string"
+        ? node.children
+        : Array.isArray(node.children)
+          ? slotText(node.children)
+          : "",
+    )
+    .join("")
+    .trim();
 
 useHead({
   script: [
@@ -44,12 +56,12 @@ useHead({
       children: JSON.stringify({
         "@context": "https://schema.org/",
         "@type": "Quotation",
-        spokenByCharacter: {
+        text: slotText(slots.default?.()),
+        creator: {
           "@type": "Person",
           name,
-          affiliation: department,
+          affiliation: { "@type": "Organization", name: department },
         },
-        text: null, // render slot here
       }),
     },
   ],
