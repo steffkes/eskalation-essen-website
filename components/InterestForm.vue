@@ -5,23 +5,32 @@ const name = ref("");
 const email = ref("");
 const phone = ref("");
 const origin = ref("");
+const website = ref(""); // honeypot
 
 const isLoading = ref(false);
 const isSent = ref(false);
+const hasError = ref(false);
 
 async function contactForm() {
   isLoading.value = true;
-  await $fetch("/api/interest", {
-    method: "POST",
-    body: {
-      name: name.value,
-      email: email.value,
-      phone: phone.value,
-      origin: origin.value,
-    },
-  });
-  isLoading.value = false;
-  isSent.value = true;
+  hasError.value = false;
+  try {
+    await $fetch("/api/interest", {
+      method: "POST",
+      body: {
+        name: name.value,
+        email: email.value,
+        phone: phone.value,
+        origin: origin.value,
+        website: website.value,
+      },
+    });
+    isSent.value = true;
+  } catch {
+    hasError.value = true;
+  } finally {
+    isLoading.value = false;
+  }
 }
 </script>
 
@@ -39,6 +48,18 @@ async function contactForm() {
   </div>
 
   <form v-else @submit.prevent="contactForm">
+    <div v-if="hasError" class="notification is-danger is-light">
+      Das hat leider nicht geklappt. Prüf bitte deine Angaben und versuch es
+      nochmal – oder schreib uns direkt eine E-Mail.
+    </div>
+
+    <div style="position: absolute; left: -10000px" aria-hidden="true">
+      <label>
+        Website
+        <input v-model="website" type="text" tabindex="-1" autocomplete="off" />
+      </label>
+    </div>
+
     <div class="columns">
       <div class="column">
         <div class="field">
