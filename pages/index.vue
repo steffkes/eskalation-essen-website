@@ -69,6 +69,25 @@ const isVideoActive = ref(false);
             ></iframe>
           </div>
         </div>
+
+        <p>
+          <strong>Also haben wir's ausprobiert.</strong> Testlauf auf der
+          Rolltreppe im UNESCO-Welterbe Zollverein in Essen:
+        </p>
+
+        <figure class="testlauf mx-auto mb-5">
+          <video
+            src="/videos/zollverein-testlauf.mp4"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="auto"
+          ></video>
+          <figcaption class="has-text-grey is-size-7">
+            Erst oben, dann unten – Runde eins geht an die Treppe.
+          </figcaption>
+        </figure>
       </div>
 
       <QuoteElement name="Martin" department="BF Krefeld">
@@ -77,15 +96,13 @@ const isVideoActive = ref(false);
 
       <div class="content">
         <p>
-          <strong>Wann und wo?</strong> Steht noch nicht fest – wir suchen
-          gerade die passende Rolltreppe. Sobald Ort und Termin klar sind,
-          erfährst du es zuerst.
+          <strong>Wo?</strong> Auf Zollverein in Essen – an genau der Rolltreppe
+          aus dem Video.
         </p>
 
         <p>
-          <strong>Du kennst eine lange Rolltreppe?</strong> Oder jemanden, der
-          eine betreibt – Kaufhaus, Bahnhof, Parkhaus?
-          <a :href="event.organizer.email">Schreib uns!</a>
+          <strong>Wann?</strong> Der Termin steht noch nicht fest. Sobald er
+          klar ist, erfährst du es zuerst.
         </p>
       </div>
 
@@ -105,3 +122,17 @@ const isVideoActive = ref(false);
     </div>
   </section>
 </template>
+
+<style scoped>
+.testlauf {
+  max-width: 320px;
+}
+
+.testlauf video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 576 / 1024;
+  border-radius: 6px;
+  background: #000;
+}
+</style>
