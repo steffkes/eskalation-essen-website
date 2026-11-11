@@ -1,6 +1,5 @@
 <script setup>
 const { event } = await useEvent();
-const isVideoActive = ref(false);
 </script>
 
 <template>
@@ -20,59 +19,10 @@ const isVideoActive = ref(false);
         </p>
       </div>
 
-      <QuoteElement name="Marcus" department="FF Taufkirchen/Vils">
-        Ja bist du deppert 🙈
-      </QuoteElement>
-
       <div class="content">
         <p>
-          In Budapest wird bereits gegen eine Rolltreppe gelaufen. Als wir den
-          <a
-            @click.prevent="isVideoActive = true"
-            href="https://www.instagram.com/p/DY1t5xMC8JE/"
-            >Instagram-Beitrag von Jánosa Bence</a
-          >
-          gesehen haben, war klar: <strong>Das brauchen wir auch.</strong>
-        </p>
-
-        <div id="video" class="mb-4">
-          <p v-if="!isVideoActive" class="mb-0">
-            <button @click="isVideoActive = true" class="button is-fullwidth">
-              Zeig mir das crazy Video auf der Rolltreppe
-            </button>
-          </p>
-
-          <div
-            v-else
-            style="
-              position: relative;
-              width: 100%;
-              height: 0px;
-              padding-bottom: 177.778%;
-            "
-          >
-            <iframe
-              allow="fullscreen"
-              allowfullscreen
-              height="100%"
-              src="https://streamable.com/e/mb5o7p?autoplay=1&loop=0&muted=1&nocontrols=1"
-              width="100%"
-              style="
-                border: none;
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                left: 0px;
-                top: 0px;
-                overflow: hidden;
-              "
-            ></iframe>
-          </div>
-        </div>
-
-        <p>
-          <strong>Also haben wir's ausprobiert.</strong> Testlauf auf der
-          Rolltreppe im UNESCO-Welterbe Zollverein in Essen:
+          <strong>Wir haben's ausprobiert.</strong> Testlauf auf der Rolltreppe
+          im UNESCO-Welterbe Zollverein in Essen:
         </p>
 
         <figure class="testlauf mx-auto mb-5">
@@ -88,6 +38,29 @@ const isVideoActive = ref(false);
             Erst oben, dann unten – Runde eins geht an die Treppe.
           </figcaption>
         </figure>
+      </div>
+
+      <QuoteElement name="Marcus" department="FF Taufkirchen/Vils">
+        Ja bist du deppert 🙈
+      </QuoteElement>
+
+      <div class="content">
+        <p><strong>Wie läuft's ab?</strong> Voraussichtlich in zwei Phasen:</p>
+
+        <ol>
+          <li>
+            <strong>Qualifying:</strong> Die Rolltreppe steht still, du läufst
+            sie hoch wie eine normale Treppe. Wer unter der Cut-off-Zeit bleibt,
+            ist weiter.
+          </li>
+          <li>
+            <strong>Finale:</strong> Die Rolltreppe fährt nach unten – und du
+            läufst trotzdem hoch. Auch hier gibt's eine Cut-off-Zeit: Wer sie
+            reißt, ist raus.
+          </li>
+        </ol>
+
+        <p>Die genauen Zeiten und die Wertung arbeiten wir gerade aus.</p>
       </div>
 
       <QuoteElement name="Martin" department="BF Krefeld">
@@ -118,6 +91,14 @@ const isVideoActive = ref(false);
         </p>
 
         <InterestForm />
+
+        <p class="has-text-grey is-size-7 mt-5">
+          <strong class="has-text-grey">Inspiration:</strong> In Budapest wird
+          schon gegen die Rolltreppe gelaufen, siehe
+          <a href="https://www.instagram.com/p/DY1t5xMC8JE/" target="_blank"
+            >Instagram-Beitrag von Jánosa Bence</a
+          >. Danke an Fabian für den Tipp!
+        </p>
       </div>
     </div>
   </section>
