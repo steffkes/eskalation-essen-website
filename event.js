@@ -1,7 +1,7 @@
 export const event = {
   "@context": "https://schema.org",
   "@type": "SportsEvent",
-  url: "https://eskalation.gelungen.es",
+  url: "https://eskalation-essen.de",
   name: "Eskalation · Rise Against the Machine",
   description: "In Bewegung war die Treppe bisher nie!",
   organizer: {
