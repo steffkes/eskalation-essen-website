@@ -12,7 +12,7 @@ useSeoMeta({
       <p>Angaben gemäß § 5 DDG</p>
 
       <p>
-        Eskalation<br />
+        Eskalation Essen<br />
         c/o Stefan Matheis<br />
         Alpenstraße 19<br />
         87435 Kempten
