@@ -1,5 +1,5 @@
-import { event } from "../event";
+import { event, subline } from "../event";
 
 export const useEvent = async () => {
-  return { event };
+  return { event, subline };
 };

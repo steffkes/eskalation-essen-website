@@ -1,13 +1,23 @@
 <script setup>
-const { event } = await useEvent();
+const { event, subline } = await useEvent();
 
 const activeModal = ref(false);
 
+const shareTitle = event.name + " · " + subline;
+
 useSeoMeta({
+  description: event.description,
+  ogTitle: shareTitle,
+  ogDescription: event.description,
+  ogSiteName: event.name,
+  ogLocale: "de_DE",
+  ogUrl: event.url,
   ogImage: event.url + "/og.jpg",
   ogImageWidth: 1200,
   ogImageHeight: 630,
-  description: event.description,
+  ogImageAlt: "Die orange Rolltreppe am Ruhr Museum auf Zollverein",
+  twitterTitle: shareTitle,
+  twitterDescription: event.description,
 });
 
 const activeNavbar = ref(false);
@@ -101,7 +111,7 @@ useHead({
         <div class="container is-max-desktop">
           <div class="content">
             <h1 class="title">{{ event.name }}</h1>
-            <p class="subtitle">{{ event.description }}</p>
+            <p class="subtitle">{{ subline }}</p>
           </div>
         </div>
       </section>

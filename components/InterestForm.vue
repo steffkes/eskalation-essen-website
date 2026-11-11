@@ -1,5 +1,5 @@
 <script setup>
-const { event } = await useEvent();
+const { event, subline } = await useEvent();
 
 const name = ref("");
 const email = ref("");
@@ -39,7 +39,7 @@ async function contactForm() {
     <p>
       <strong>Danke =) Wir freuen uns, dass du dich freust!</strong> Wir melden
       uns, sobald es etwas Neues gibt zu {{ event.name }} ·
-      {{ event.description }} &mdash; stay tuned!
+      {{ subline }} &mdash; stay tuned!
     </p>
 
     <p class="mt-4">
@@ -51,9 +51,7 @@ async function contactForm() {
         class="button is-success is-inverted"
         :href="
           'https://wa.me/?text=' +
-          encodeURIComponent(
-            event.name + ' – ' + event.description + ' ' + event.url,
-          )
+          encodeURIComponent(event.description + ' ' + event.url)
         "
         target="_blank"
         rel="noopener"
