@@ -5,7 +5,6 @@ const required = z.string().trim().min(1).max(200);
 
 const Schema = z.strictObject({
   name: required,
-  email: z.email().max(200),
   phone: required,
   origin: required,
   // honeypot: hidden in the form, only bots fill it in

@@ -2,7 +2,6 @@
 const { event, subline } = await useEvent();
 
 const name = ref("");
-const email = ref("");
 const phone = ref("");
 const origin = ref("");
 const website = ref(""); // honeypot
@@ -19,7 +18,6 @@ async function contactForm() {
       method: "POST",
       body: {
         name: name.value,
-        email: email.value,
         phone: phone.value,
         origin: origin.value,
         website: website.value,
@@ -105,27 +103,13 @@ async function contactForm() {
       </div>
       <div class="column">
         <div class="field">
-          <label class="label">E-Mail *</label>
-          <div class="control">
-            <input
-              v-model="email"
-              type="email"
-              class="input"
-              placeholder="Deine E-Mail-Adresse"
-              required
-              :disabled="isLoading"
-            />
-          </div>
-        </div>
-
-        <div class="field">
           <label class="label">Handynummer *</label>
           <div class="control">
             <input
               v-model="phone"
               type="tel"
               class="input"
-              placeholder="Deine Handynummer"
+              placeholder="Für WhatsApp"
               required
               :disabled="isLoading"
             />
