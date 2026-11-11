@@ -122,6 +122,7 @@ const togglePlay = (e) =>
   <ImageSection
     url="/images/testlauf/rolltreppe-nacht.jpg"
     :position="{ y: 60 }"
+    :ratio="3 / 4"
   >
     <h2 class="title is-4">Wo &amp; wann</h2>
 
