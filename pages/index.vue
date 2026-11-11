@@ -12,21 +12,19 @@ const fakten = [
   <section class="section">
     <div class="container is-max-desktop">
       <div class="content">
+        <p class="is-size-4 has-text-weight-bold mb-3">
+          Rauf, während sie runterfährt.
+        </p>
+
         <p class="is-size-5">
-          <strong>Ein Treppenlauf gegen die Rolltreppe:</strong> rauf, während
-          sie runterfährt.
+          Der Treppenlauf für Feuerwehrleute gegen die Rolltreppe – auf der
+          längsten freistehenden Rolltreppe Deutschlands, mitten im
+          UNESCO-Welterbe Zollverein in Essen.
         </p>
 
         <p>
-          Treppenläufe für Feuerwehrleute gibt es viele. Hochhäuser,
-          Skiflugschanzen, Aussichtstürme – alles schon gelaufen. Mal kurz, mal
-          lang, mal mehrfach hintereinander. Aber eine Treppe, die dir
-          entgegenkommt? Das gab's noch nie.
-        </p>
-
-        <p>
-          Gelaufen wird auf der längsten freistehenden Rolltreppe Deutschlands –
-          im UNESCO-Welterbe Zollverein in Essen.
+          Hochhäuser, Skiflugschanzen, Aussichtstürme – alles schon gelaufen.
+          Aber eine Treppe, die dir entgegenkommt? Das gab's noch nie.
         </p>
       </div>
 
@@ -43,12 +41,7 @@ const fakten = [
         </a>
       </p>
 
-      <div class="content">
-        <p>
-          <strong>Wir haben's ausprobiert.</strong> Testlauf am 10. November auf
-          Zollverein:
-        </p>
-      </div>
+      <h2 class="title is-4">So fühlt sich das an</h2>
 
       <div class="columns is-mobile videos mb-5">
         <figure class="column">
@@ -61,7 +54,7 @@ const fakten = [
             preload="auto"
           ></video>
           <figcaption class="has-text-grey is-size-7">
-            Einmal ganz nach oben – 58 Meter am Stück.
+            58 Meter. Kein Absatz. Keine Pause.
           </figcaption>
         </figure>
         <figure class="column">
@@ -74,7 +67,7 @@ const fakten = [
             preload="auto"
           ></video>
           <figcaption class="has-text-grey is-size-7">
-            Erst oben, dann unten – Runde eins geht an die Treppe.
+            Die Treppe hört nicht auf. Du schon?
           </figcaption>
         </figure>
       </div>
@@ -83,23 +76,23 @@ const fakten = [
         Ja bist du deppert 🙈
       </QuoteElement>
 
-      <div class="content">
-        <p><strong>Wie läuft's ab?</strong> Voraussichtlich in zwei Phasen:</p>
+      <h2 class="title is-4 mt-6">Zwei Runden gegen die Maschine</h2>
 
+      <div class="content">
         <ol>
           <li>
-            <strong>Qualifying:</strong> Die Rolltreppe steht still, du läufst
-            sie hoch wie eine normale Treppe. Wer unter der Cut-off-Zeit bleibt,
-            ist weiter.
+            <strong>Qualifying:</strong> Die Rolltreppe steht still – du läufst
+            sie hoch wie eine normale Treppe. Bleib unter der Cut-off-Zeit und
+            du bist im Finale.
           </li>
           <li>
-            <strong>Finale:</strong> Die Rolltreppe fährt nach unten – und du
-            läufst trotzdem hoch. Auch hier gibt's eine Cut-off-Zeit: Wer sie
-            reißt, ist raus.
+            <strong>Finale:</strong> Jetzt fährt sie nach unten – und du läufst
+            trotzdem rauf. Auch hier zählt die Cut-off-Zeit: Wer sie reißt, ist
+            raus.
           </li>
         </ol>
 
-        <p>Die genauen Zeiten und die Wertung arbeiten wir gerade aus.</p>
+        <p>Cut-off-Zeiten und Wertung geben wir rechtzeitig bekannt.</p>
       </div>
 
       <div class="galerie mb-5">
@@ -115,7 +108,7 @@ const fakten = [
         />
         <img
           src="/images/testlauf/team.jpg"
-          alt="Das Testlauf-Team lachend am Ende der Rolltreppe"
+          alt="Feuerwehrleute lachend am Ende der Rolltreppe"
           class="breit"
           loading="lazy"
         />
@@ -131,16 +124,17 @@ const fakten = [
     url="/images/testlauf/rolltreppe-nacht.jpg"
     :position="{ y: 60 }"
   >
+    <h2 class="title is-4">Wo &amp; wann</h2>
+
     <div class="content">
       <p>
-        <strong>Wo?</strong> Auf Zollverein in Essen – an genau der Rolltreppe
-        aus den Videos. Sie führt an der ehemaligen Kohlenwäsche hinauf zum Ruhr
-        Museum, mitten im UNESCO-Welterbe.
+        <strong>Zollverein, Essen.</strong> Die orange Rolltreppe an der
+        ehemaligen Kohlenwäsche, hinauf zum Ruhr Museum – Industriekulisse
+        inklusive.
       </p>
 
       <p>
-        <strong>Wann?</strong> Der Termin steht noch nicht fest. Sobald er klar
-        ist, erfährst du es zuerst.
+        <strong>Termin folgt.</strong> Wer sich einträgt, erfährt ihn zuerst.
       </p>
     </div>
 
@@ -161,11 +155,13 @@ const fakten = [
       Das ist mal ne wilde Sache 🦾
     </QuoteElement>
 
-    <div id="mitmachen" class="content">
+    <h2 id="mitmachen" class="title is-4 mt-6">Sei dabei</h2>
+
+    <div class="content">
       <p>
-        <strong>Hast du Bock drauf?</strong> Dann trag dich ein – wir melden uns
-        per WhatsApp, sobald es Genaueres oder Testläufe gibt. Deine Daten
-        nutzen wir nur dafür ツ
+        Trag dich ein und sichere dir die Infos als Erste:r – wir melden uns per
+        WhatsApp, sobald Termin und Anmeldung stehen. Deine Daten nutzen wir nur
+        dafür ツ
       </p>
 
       <InterestForm />
