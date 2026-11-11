@@ -97,16 +97,6 @@ const fakten = [
 
       <div class="galerie mb-5">
         <img
-          src="/images/testlauf/laeufer-treppe.jpg"
-          alt="Feuerwehrmann in Einsatzkleidung auf der orangen Rolltreppe"
-          loading="lazy"
-        />
-        <img
-          src="/images/testlauf/laeuferin-treppe.jpg"
-          alt="Feuerwehrfrau in Einsatzkleidung auf der Rolltreppe"
-          loading="lazy"
-        />
-        <img
           src="/images/testlauf/team.jpg"
           alt="Feuerwehrleute lachend am Ende der Rolltreppe"
           class="breit"
