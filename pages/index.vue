@@ -6,6 +6,10 @@ const fakten = [
   { zahl: "24 m", text: "Höhe" },
   { zahl: "90 s", text: "Fahrzeit" },
 ];
+
+// looping videos need a way to stop them (WCAG 2.2.2)
+const togglePlay = (e) =>
+  e.target.paused ? e.target.play() : e.target.pause();
 </script>
 
 <template>
@@ -17,14 +21,15 @@ const fakten = [
         </p>
 
         <p class="is-size-5">
-          Der Treppenlauf für Feuerwehrleute gegen die Rolltreppe – auf der
-          längsten freistehenden Rolltreppe Deutschlands, mitten im
+          Der Treppenlauf für Feuerwehrleute gegen die Rolltreppe – 2027 auf der
+          längsten freistehenden Rolltreppe Deutschlands, am Ruhr Museum im
           UNESCO-Welterbe Zollverein in Essen.
         </p>
 
         <p>
           Hochhäuser, Skiflugschanzen, Aussichtstürme – alles schon gelaufen.
-          Aber eine Treppe, die dir entgegenkommt? Das gab's noch nie.
+          Aber eine Treppe, die dir entgegenkommt? Das gab's in Deutschland noch
+          nie.
         </p>
       </div>
 
@@ -52,8 +57,10 @@ const fakten = [
             loop
             playsinline
             preload="auto"
+            title="Klicken zum Pausieren"
+            @click="togglePlay"
           ></video>
-          <figcaption class="has-text-grey is-size-7">
+          <figcaption class="has-text-grey-dark is-size-7">
             58 Meter. Kein Absatz. Keine Pause.
           </figcaption>
         </figure>
@@ -65,8 +72,10 @@ const fakten = [
             loop
             playsinline
             preload="auto"
+            title="Klicken zum Pausieren"
+            @click="togglePlay"
           ></video>
-          <figcaption class="has-text-grey is-size-7">
+          <figcaption class="has-text-grey-dark is-size-7">
             Die Treppe hört nicht auf. Du schon?
           </figcaption>
         </figure>
@@ -118,13 +127,14 @@ const fakten = [
 
     <div class="content">
       <p>
-        <strong>Zollverein, Essen.</strong> Die orange Rolltreppe an der
-        ehemaligen Kohlenwäsche, hinauf zum Ruhr Museum – Industriekulisse
+        <strong>Ruhr Museum, Zollverein Essen.</strong> Die orange Rolltreppe an
+        der ehemaligen Kohlenwäsche, hinauf zum Museum – Industriekulisse
         inklusive.
       </p>
 
       <p>
-        <strong>Termin folgt.</strong> Wer sich einträgt, erfährt ihn zuerst.
+        <strong>2027.</strong> Der genaue Termin folgt – wer sich einträgt,
+        erfährt ihn zuerst.
       </p>
     </div>
 
@@ -198,7 +208,14 @@ const fakten = [
   color: #fff;
 }
 
+.videos {
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .videos video {
+  cursor: pointer;
   display: block;
   width: 100%;
   aspect-ratio: 9 / 16;
